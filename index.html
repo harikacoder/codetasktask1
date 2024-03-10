@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="list.css">
+    <script src="https://kit.fontawesome.com/55f8988eb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>web developer</p>
+                <h1>Hi, This is Harika</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="mine.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Harika, currently pursuing my B.Tech in artificial intelligence and machine learning. I'm very much interested in robotics and web development.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Web development</li>
+                            <li>Languages - C & Python</li>
+                            <li>UI/UX design</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <p>No experience<br>I'm a student</p>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>2025 - B.Tech at NSRIT College</li>
+                            <li>2021 - Intermediate at Sri Gayatri</li>
+                            <li>2019 - 10th at Deepthi High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My skills</h1>
+            <div class="skills-list">
+                <div>
+                    <h2> Web development</h2>
+                   <p>good at html,css,javascript<br>
+                only front-end </p>
+                <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2> Design</h2>
+               <p>ui/ux design</p>
+                <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2> Coding languages</h2>
+                    <p> good at c and python<br>
+                    good at html,css,javascript<br>
+                basic level at java</p>
+                <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="p2.jpg">
+                    <div class="layer">
+                        <h3>social website</h3>
+                        <p> this website connects different people</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="p4.jpg">
+                    <div class="layer">
+                        <h3>online shopping </h3>
+                        <p> this website allows you to shop different brands</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="p5.jpg">
+                    <div class="layer">
+                        <h3>E-commerce website</h3>
+                        <p> this websiteserves as a virtual platform where businesses and consumers can interact,
+                            <br>and complete financial transactions electronically.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class ="btn">See More</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>  harikavenkatarao@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>  6303032103</p>
+                    <div class="socialmedia-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="MARPINA HARIKA.pdf" download class="btn button">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name = "Name" placeholder="your name " required>
+                         <input type="email"  name ="email" placeholder="your-email"  required>
+                         <textarea name=" message"  rows="6"  placeholder="your message"></textarea> 
+                         <button type="submit" class="btn btn button">submit</button>    
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Made by @ Harika<i class="fa-solid fa-heart"></i> </p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
